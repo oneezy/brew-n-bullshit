@@ -25,6 +25,7 @@ img { max-width: 100%; }
 a { text-decoration: none; font-weight: 900; }
 p { font-size: 2.5vw; margin: 0 0 2rem; color: rgba(0,0,0,.65) !important; }
 strong { color: black; }
+i { font-style: normal; }
 
 /* LAYOUT 
 *******************************************/
@@ -80,7 +81,7 @@ header img { max-height: 100%; }
 header h1 { padding: 1rem; text-transform: uppercase; } 
 .header__foam { width: 100%; transform: scale(1,1.5); transform-origin: top; }
 
-.section { padding: 10vh 5%; display: flex; flex-direction: column; min-height: 100vh; }
+.section { padding: 10vh 5%; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
 .section--white { background: white; color: black; }
 .section--white * { color: black; }
 
@@ -111,21 +112,31 @@ header h1 { padding: 1rem; text-transform: uppercase; }
 .section__hero .hero-image { max-width: 300%; width: 33%; }
 
 
-.button__listen {
+.section__hero { padding: 0 5% 0; min-height: unset; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.button__listen,
+.button__beer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 		background: black;
     border-radius: 100px;
-    padding: 1vw 3vw;
+    padding: 1vw 5vw;
     margin: 0 0 2vw;
     font-size: 3vw;
 		text-transform: uppercase;
     color: white;
 }
 
-.button__listen i { color: var(--blue); padding: 0 1vw 0 0; }
+.button__listen i,
+.button__beer i { color: var(--blue); padding: 0 1vw 0 0; }
+
+/* .button__beer i { font-size: 3.5vw; } */
 
 /* PODCAST */
 .section__podcast { background: black; min-height: 100vh; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
 .section__podcast::before { content: ""; display: block; background-image: linear-gradient(to bottom, rgba(0,0,0,.64), black 65px); border-top: 8px solid black; height: 200px; position: absolute; bottom: 100%; left: 0; right: 0; width: 100%; }
+.section__podcast::after { content: ""; display: block; background-image: linear-gradient(to top, rgba(0,0,0,.64), black 65px); border-bottom: 8px solid black; height: 200px; position: absolute; top: 100%; left: 0; right: 0; width: 100%; }
 .section__podcast iframe {
   filter: grayscale(100%) sepia(10%) hue-rotate(190deg) saturate(500%); 
 }
@@ -138,6 +149,11 @@ header h1 { padding: 1rem; text-transform: uppercase; }
 /* for black bg... */
 .podcast__logos a { display: flex; align-items: center; justify-content: center; padding: 0 1rem; flex: 1; }
 .podcast__logos a img { max-width: 80%; }
+
+
+.section__about { position: relative; }
+.section__about::before { content: ""; display: block; background-image: linear-gradient(to bottom, rgba(255,255,255,.56), white 65px); border-top: 8px solid white; height: 100px; position: absolute; bottom: 100%; left: 0; right: 0; width: 100%; }
+
 
 /* CLASSES 
 *******************************************/
@@ -165,6 +181,8 @@ header h1 { padding: 1rem; text-transform: uppercase; }
 		3px 3px 0px var(--blue), 
 		0 12px 12px rgba(0,0,0,.64); 
 }
+
+.section__support { min-height: unset; padding: 300px 0 200px; }
 
 .eapp-facebook-chat-root-layout-component * { font-size: unset; }
 
