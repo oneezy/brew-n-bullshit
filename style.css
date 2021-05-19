@@ -162,6 +162,7 @@ header h1 { padding: 1rem; text-transform: uppercase; }
 .white { color: var(--white); }
 .gray { color: var(--gray); }
 
+.none   { display: none; }
 .hidden { opacity: 0; position: absolute; top: 0; left: -99999999999999px; pointer-events: none; }
 
 
